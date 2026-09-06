@@ -1,50 +1,49 @@
+/* বিশ্বজনীন স্টাইল */
+* {
+    box-sizing: border-box;
+}
 
-/* পুরো পেজের স্টাইল */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f0f4f1;
+    color: #2c3e50;
 }
 
-/* হেডার ও লোগো সাজানো */
+/* হেডার */
 header {
-    background-color: #1e5631;
+    background: linear-gradient(135deg, #114b27, #1e703a);
     color: white;
-    padding: 20px;
+    padding: 25px 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo-container {
-    margin-bottom: 10px;
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    border: 4px solid #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .club-title h1 {
-    margin: 5px 0;
-    font-size: 28px;
+    margin: 10px 0 5px;
+    font-size: 26px;
 }
 
 .address {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.9;
 }
 
-/* নেভিগেশন বার */
+/* নেভিগেশন */
 nav {
-    background-color: #143e21;
+    background-color: #0b3319;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -53,65 +52,168 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 12px 16px;
     display: block;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 nav ul li a:hover {
-    background-color: #2e8b57;
+    background-color: #27ae60;
 }
 
-/* সেকশন ডিজাইন */
+/* সেকশন লেআউট */
 .content-section {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .content-section h2 {
-    color: #1e5631;
-    border-bottom: 2px solid #2e8b57;
+    color: #114b27;
+    border-bottom: 2px solid #27ae60;
     padding-bottom: 8px;
+    margin-top: 0;
 }
 
-/* ফটো গ্যালারি বা সদস্যবর্গের ছবি গ্রিড */
+.subtitle {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: -5px;
+}
+
+/* সদস্য গ্রিড */
 .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
 }
 
 .member-card {
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    cursor: pointer;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
 .member-card img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
     display: block;
+    transition: transform 0.2s;
+}
+
+.member-card img:hover {
+    transform: scale(1.04);
+}
+
+/* কর্মসূচি গ্যালারি */
+.event-card {
+    background: #f9fbf9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #27ae60;
+    margin-bottom: 15px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ফর্ম ডিজাইন */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #114b27;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+
+/* পপ-আপ মোডাল (Lightbox) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* ফুটার */
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #143e21;
+    background-color: #0b3319;
     color: white;
-    margin-top: 40px;
+    margin-top: 30px;
+    font-size: 13px;
 }
