@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -6,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>সবুজ সংঘ ক্লাব - বসিরহাট</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ছবি একই সাইজে রাখার জন্য CSS নিয়মাবলী */
+        .gallery-grid, .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-grid img, .member-card img {
+            width: 100%;
+            height: 180px; /* সব ছবির উচ্চতা একই রাখা হলো */
+            object-fit: cover; /* ছবি চ্যাপ্টা না হয়ে সুন্দরভাবে ক্রপ হবে */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-grid img:hover, .member-card img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
 
@@ -25,7 +45,7 @@
         <ul>
             <li><a href="#events">কর্মসূচি</a></li>
             <li><a href="#members">সদস্যবৃন্দ</a></li>
-            <li><a href="#join">আবেদন করুন</a>sabujsanghaclub320@gmail.com</li>
+            <li><a href="#join">আবেদন করুন</a></li>
             <li><a href="#contact">যোগাযোগ</a></li>
         </ul>
     </nav>
@@ -44,7 +64,7 @@
             <div class="event-card">
                 <h3>সাংস্কৃতিক ও ক্রীড়া অনুষ্ঠান</h3>
                 <div class="gallery-grid"> 
-                     <img src="club.jpeg" alt="কর্মসূচি ছবি ৪" onclick="openModal(this.src)">
+                    <img src="club.jpeg" alt="কর্মসূচি ছবি ৪" onclick="openModal(this.src)">
                     <img src="WhatsApp Image 2026-09-06 at 4.58.24 PM.jpeg" alt="কর্মসূচি ছবি ৩" onclick="openModal(this.src)">
                 </div>
             </div>
@@ -55,52 +75,59 @@
     <section id="members" class="content-section">
         <h2>আমাদের সক্রিয় সদস্যবৃন্দ</h2>
         <p class="subtitle">ছবিতে ক্লিক করে বড় করে দেখুন</p>
-             <div class="member-grid">
-             <div class="member-card">
-             <img src="WhatsApp Image.jpeg"সদস্য ১" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="muz.jpeg" alt="সদস্য ২" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="ali.jpeg" alt="সদস্য ৩" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="ak.jpeg" alt="সদস্য ৪" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="moni.jpeg" alt="সদস্য ৫" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="muf.jpeg" alt="সদস্য ৬" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="mus.jpeg" alt="সদস্য ৭" onclick="openModal(this.src)">
-             </div>
-             <div class="member-card">
-             <img src="ari.jpeg" alt="সদস্য ৮" onclick="openModal(this.src)">
-             </div> class="member-card">
-             <img src="bele.jpeg" alt="সদস্য ৯" onclick="openModal(this.src)">
-             </div>  class="member-card">
-             <img src="lal.jpeg" alt="সদস্য ১০" onclick="openModal(this.src)">
-             </div> class="member-card">
-             <img src="kaj.jpeg" alt="সদস্য ১১" onclick="openModal(this.src)">
-             </div> class="member-card">
-             <img src="hac.jpeg" alt="সদস্য ১২" onclick="openModal(this.src)">
-             </div> class="member-card">   
-             <img src="kus.jpeg" alt="সদস্য ১৩" onclick="openModal(this.src)">
-             </div>  class="member-card">
-             <img src="Wh.jpeg" alt="সদস্য ১৪" onclick="openModal(this.src)">
-             </div>  class="member-card">
-             <img src="irl.jpeg" alt="সদস্য ১৫" onclick="openModal(this.src)">
-             </div>
- 
+        <div class="member-grid">
+            <div class="member-card">
+                <img src="WhatsApp Image.jpeg" alt="সদস্য ১" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="muz.jpeg" alt="সদস্য ২" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="ali.jpeg" alt="সদস্য ৩" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="ak.jpeg" alt="সদস্য ৪" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="moni.jpeg" alt="সদস্য ৫" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="muf.jpeg" alt="সদস্য ৬" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="mus.jpeg" alt="সদস্য ৭" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="ari.jpeg" alt="সদস্য ৮" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="bele.jpeg" alt="সদস্য ৯" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="lal.jpeg" alt="সদস্য ১০" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="kaj.jpeg" alt="সদস্য ১১" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="hac.jpeg" alt="সদস্য ১২" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">   
+                <img src="kus.jpeg" alt="সদস্য ১৩" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="Wh.jpeg" alt="সদস্য ১৪" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="irl.jpeg" alt="সদস্য ১৫" onclick="openModal(this.src)">
+            </div>
+        </div>
     </section>
 
-    <!-- মেম্বারশিপ আবেদন ফর্ম -->
+    <!-- মেম্বারশিপ আবেদন ফর্ম (Formspree এর মাধ্যমে ইমেইল নোটিফিকেশন যাবে) -->
     <section id="join" class="content-section form-section">
         <h2>নতুন সদস্য পদের জন্য আবেদন করুন</h2>
-        <form action="(https://formspree.io/f/mljewzrb)" method="POST" class="join-form">
+        <form action="https://formspree.io/f/mljewzrb" method="POST" class="join-form">
             <div class="form-group">
                 <label for="name">আপনার নাম:</label>
                 <input type="text" id="name" name="Name" placeholder="আপনার পুরো নাম লিখুন" required>
@@ -122,14 +149,14 @@
         <h2>যোগাযোগ করুন</h2>
         <div class="contact-info">
             <p><strong>ঠিকানা:</strong> গোলাবাড়িচাঁদপুর, বসিরহাট, উত্তর ২৪ পরগনা, পিন - ৭৪৩৪৪৫</p>
-            <p><strong>ইমেল:</strong> <a href="mailto:contact@sabujsangha.org">sabujsanghaclub320@gmail.com</a></p>
+            <p><strong>ইমেল:</strong> <a href="mailto:sabujsanghaclub320@gmail.com">sabujsanghaclub320@gmail.com</a></p>
         </div>
     </section>
 
-    <!-- ছবির পপ-আপ মোডাল (মোবাইলে ফুল ভিউ দেখার জন্য) -->
+    <!-- ছবির পপ-আপ মোডাল -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
+        <img class="modal-content" id="img01" alt="বড় ছবি">
     </div>
 
     <footer>
