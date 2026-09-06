@@ -1,0 +1,71 @@
+/* style.css ফাইলে যোগ করুন */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #228b22; /* গাঢ় সবুজ */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav ul {
+    background-color: #006400; /* আরও গাঢ় সবুজ */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.content-section {
+    padding: 40px 20px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.event-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
