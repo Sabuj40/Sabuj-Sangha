@@ -1,46 +1,97 @@
+
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সবুজ সংঘ ক্লাব</title>
+    <title>সবুজ সংঘ ক্লাব - বসিরহাট</title>
+    <!-- CSS ফাইল লিংক -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- হেডার সেকশন: লোগো ও নাম -->
     <header>
-        <h1>সবুজ সংঘ</h1>
-        <p>গোলাবাড়িচাঁদপুর, বসিরহাট</p>
+        <div class="logo-container">
+            <!-- লোগোর ফাইল নাম যদি 'LOGO.jpeg' হয় -->
+            <img src="LOGO.jpeg" alt="সবুজ সংঘ লোগো" class="logo">
+        </div>
+        <div class="club-title">
+            <h1>সবুজ সংঘ</h1>
+            <p class="address">গোলাবাড়িচাঁদপুর, বসিরহাট, উত্তর ২৪ পরগনা - ৭৪৩৪৪৫</p>
+        </div>
     </header>
 
+    <!-- নেভিগেশন বার -->
     <nav>
-        <a href="#about">আমাদের সম্পর্কে</a>
-        <a href="#events">কর্মসূচি ও অনুষ্ঠান</a>
-        <a href="#contact">যোগাযোগ</a>
+        <ul>
+            <li><a href="#about">আমাদের সম্পর্কে</a></li>
+            <li><a href="#events">কর্মসূচি ও কাজ</a></li>
+            <li><a href="#members">সদস্যবৃন্দ</a></li>
+            <li><a href="#contact">যোগাযোগ</a></li>
+        </ul>
     </nav>
 
-    <section id="about">
-        <h2>আমাদের ক্লাব সম্পর্কে</h2>
-        <p>সবুজ সংঘ সামাজিক ও সাংস্কৃতিক কল্যাণে নিয়োজিত একটি স্থানীয় ক্লাব।</p>
+    <!-- ক্লাবের কর্মসূচি ও সামাজিক কাজ -->
+    <section id="events" class="content-section">
+        <h2>আমাদের মূল কর্মসূচি ও সমাজসেবামূলক কাজ</h2>
+        <div class="events-list">
+            <div class="event-item">
+                <h3>স্বাধীনতা দিবস উদযাপন</h3>
+            </div>
+            <div class="event-item">
+                <h3>রক্তদান শিবির</h3>
+            </div>
+            <div class="event-item">
+                <h3>বিনা মূল্যে চক্ষু পরীক্ষা</h3>
+            </div>
+            <div class="event-item">
+                <h3>সমাজ সেবামূলক কাজ</h3>
+            </div>
+        </div>
     </section>
 
-    <section id="events">
-        <h2>আসন্ন অনুষ্ঠান</h2>
-        <ul>
-            <li>রক্তদান শিবির</li>
-            <li>বার্ষিক ক্রীড়া প্রতিযোগিতা</li>
-            <li>দুর্গাপূজা ও সাংস্কৃতিক অনুষ্ঠান</li>
-        </ul>
+    <!-- সদস্যবৃন্দের সেকশন: আপনার আপলোড করা ছবিগুলো ব্যবহার করুন -->
+    <section id="members" class="content-section">
+        <h2>আমাদের কয়েকজন সক্রিয় সদস্য</h2>
+        <div class="member-grid">
+            <!-- প্রথম সদস্যের ছবি (যেমন: Wh.jpeg) -->
+            <div class="member-card">
+                <img src="Wh.jpeg" alt="সদস্য ১">
+            </div>
+            <!-- দ্বিতীয় সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at .jpeg) -->
+            <div class="member-card">
+                <img src="WhatsApp Image 2026-09-06 at .jpeg" alt="সদস্য ২">
+            </div>
+            <!-- তৃতীয় সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at 4.54.28 PM.jpeg) -->
+            <div class="member-card">
+                <img src="WhatsApp Image 2026-09-06 at 4.54.28 PM.jpeg" alt="সদস্য ৩">
+            </div>
+            <!-- চতুর্থ সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at 4.54.29 PM.jpeg) -->
+            <div class="member-card">
+                <img src="WhatsApp Image 2026-09-06 at 4.54.29 PM.jpeg" alt="সদস্য ৪">
+            </div>
+            <!-- পঞ্চম সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at 4.54.2PM.jpeg) -->
+            <div class="member-card">
+                <img src="WhatsApp Image 2026-09-06 at 4.54.2PM.jpeg" alt="সদস্য ৫">
+            </div>
+        </div>
+        <p class="and-more">এবং আরো অনেক...</p>
     </section>
 
-    <section id="contact">
+    <!-- যোগাযোগ সেকশন -->
+    <section id="contact" class="content-section">
         <h2>যোগাযোগ করুন</h2>
-        <p>ঠিকানা: গোলাবাড়িচাঁদপুর, বসিরহাট</p>
-        <p>ইমেল: contact@sabujsangha.org</p>
+        <div class="contact-info">
+            <p><strong>ঠিকানা:</strong> গোলাবাড়িচাঁদপুর, বসিরহাট, উত্তর ২৪ পরগনা, পিন - ৭৪৩৪৪৫</p>
+            <p><strong>ইমেল:</strong> <a href="mailto:contact@sabujsangha.org">contact@sabujsangha.org</a></p>
+        </div>
     </section>
 
+    <!-- ফুটার -->
     <footer>
-        <p>&copy; ২০২৬ সবুজ সংঘ। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>&copy; ২০২৬ সবুজ সংঘ ক্লাব। সর্বস্বত্ব সংরক্ষিত।</p>
     </footer>
 
 </body>
