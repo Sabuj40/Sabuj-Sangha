@@ -25,6 +25,26 @@
         .gallery-grid img:hover, .member-card img:hover {
             transform: scale(1.05);
         }
+
+        /* ইনপুট ফিল্ড স্টাইল */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="file"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -124,10 +144,11 @@
         </div>
     </section>
 
-    <!-- মেম্বারশিপ আবেদন ফর্ম (Formspree এর মাধ্যমে ইমেইল নোটিফিকেশন যাবে) -->
+    <!-- মেম্বারশিপ আবেদন ফর্ম -->
     <section id="join" class="content-section form-section">
         <h2>নতুন সদস্য পদের জন্য আবেদন করুন</h2>
-        <form action="https://formspree.io/f/mljewzrb" method="POST" class="join-form">
+        <!-- enctype="multipart/form-data" যুক্ত করা হয়েছে যেন ফাইল আপলোড হয়ে মেলে পৌঁছায় -->
+        <form action="https://formspree.io/f/mljewzrb" method="POST" enctype="multipart/form-data" class="join-form">
             <div class="form-group">
                 <label for="name">আপনার নাম:</label>
                 <input type="text" id="name" name="Name" placeholder="আপনার পুরো নাম লিখুন" required>
@@ -140,6 +161,19 @@
                 <label for="address">ঠিকানা:</label>
                 <textarea id="address" name="Address" rows="3" placeholder="আপনার গ্রাম/পাড়া ও পোস্ট অফিস লিখুন" required></textarea>
             </div>
+            
+            <!-- ফটো আপলোড ফিল্ড -->
+            <div class="form-group">
+                <label for="photo">আপনার পাসপোর্ট সাইজ ফটো আপলোড করুন:</label>
+                <input type="file" id="photo" name="Photo" accept="image/*" required>
+            </div>
+
+            <!-- আধার কার্ড আপলোড ফিল্ড -->
+            <div class="form-group">
+                <label for="aadhaar">আধার কার্ডের ছবি/পিডিএফ আপলোড করুন:</label>
+                <input type="file" id="aadhaar" name="Aadhaar_Document" accept="image/*,.pdf" required>
+            </div>
+
             <button type="submit" class="submit-btn">আবেদন জমা দিন</button>
         </form>
     </section>
