@@ -217,3 +217,18 @@ footer {
     margin-top: 30px;
     font-size: 13px;
 }
+/* ছবিগুলোর কন্টেইনার বা কার্ডের জন্য */
+.member-card {
+  width: 100%; /* বা নির্দিষ্ট প্রস্থ যেমন: 200px */
+  height: 250px; /* একটি নির্দিষ্ট উচ্চতা দিন */
+  overflow: hidden; /* অতিরিক্ত অংশ কেটে যাবে */
+  border-radius: 8px; /* ইচ্ছে হলে কোণা গোল করার জন্য */
+}
+
+/* আসল ইমেজের জন্য */
+.member-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ছবিটি স্ট্রেচ না করে সমানভাবে ফিট করবে */
+  object-position: center; /* ছবির মাঝের অংশ দেখাবে */
+}
