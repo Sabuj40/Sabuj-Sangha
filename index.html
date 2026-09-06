@@ -1,20 +1,17 @@
 
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>সবুজ সংঘ ক্লাব - বসিরহাট</title>
-    <!-- CSS ফাইল লিংক -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- হেডার সেকশন: লোগো ও নাম -->
+    <!-- হেডার সেকশন -->
     <header>
         <div class="logo-container">
-            <!-- লোগোর ফাইল নাম যদি 'LOGO.jpeg' হয় -->
             <img src="LOGO.jpeg" alt="সবুজ সংঘ লোগো" class="logo">
         </div>
         <div class="club-title">
@@ -26,63 +23,110 @@
     <!-- নেভিগেশন বার -->
     <nav>
         <ul>
-            <li><a href="#about">আমাদের সম্পর্কে</a></li>
-            <li><a href="#events">কর্মসূচি ও কাজ</a></li>
+            <li><a href="#events">কর্মসূচি</a></li>
             <li><a href="#members">সদস্যবৃন্দ</a></li>
+            <li><a href="#join">আবেদন করুন</a></li>
             <li><a href="#contact">যোগাযোগ</a></li>
         </ul>
     </nav>
 
-    <!-- ক্লাবের কর্মসূচি ও সামাজিক কাজ -->
+    <!-- ক্লাবের কর্মসূচি ও ফটো গ্যালারি -->
     <section id="events" class="content-section">
-        <h2>আমাদের মূল কর্মসূচি ও সমাজসেবামূলক কাজ</h2>
+        <h2>আমাদের মূল কর্মসূচি ও কার্যক্রমের ছবি</h2>
         <div class="events-list">
-            <div class="event-item">
-                <h3>স্বাধীনতা দিবস উদযাপন</h3>
+            <div class="event-card">
+                <h3>রক্তদান শিবির ও সমাজসেবা</h3>
+                <div class="gallery-grid">
+                    <img src="Wh.jpeg" alt="কর্মসূচি ছবি ১" onclick="openModal(this.src)">
+                    <img src="WhatsApp Image 2026-09-06 at 4.54.28 PM.jpeg" alt="কর্মসূচি ছবি ২" onclick="openModal(this.src)">
+                </div>
             </div>
-            <div class="event-item">
-                <h3>রক্তদান শিবির</h3>
-            </div>
-            <div class="event-item">
-                <h3>বিনা মূল্যে চক্ষু পরীক্ষা</h3>
-            </div>
-            <div class="event-item">
-                <h3>সমাজ সেবামূলক কাজ</h3>
+            <div class="event-card">
+                <h3>সাংস্কৃতিক ও ক্রীড়া অনুষ্ঠান</h3>
+                <div class="gallery-grid">
+                    <img src="WhatsApp Image 2026-09-06 at 4.54.29 PM.jpeg" alt="কর্মসূচি ছবি ৩" onclick="openModal(this.src)">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- সদস্যবৃন্দের সেকশন: আপনার আপলোড করা ছবিগুলো ব্যবহার করুন -->
+    <!-- সদস্যবৃন্দের তালিকা -->
     <section id="members" class="content-section">
-        <h2>আমাদের কয়েকজন সক্রিয় সদস্য</h2>
+        <h2>আমাদের সক্রিয় সদস্যবৃন্দ</h2>
+        <p class="subtitle">ছবিতে ক্লিক করে বড় করে দেখুন</p>
         <div class="member-grid">
-            <!-- প্রথম সদস্যের ছবি (যেমন: Wh.jpeg) -->
             <div class="member-card">
-                <img src="Wh.jpeg" alt="সদস্য ১">
+                <img src="Wh.jpeg" alt="সদস্য ১" onclick="openModal(this.src)">
             </div>
-            <!-- দ্বিতীয় সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at .jpeg) -->
             <div class="member-card">
-                <img src="WhatsApp Image 2026-09-06 at .jpeg" alt="সদস্য ২">
+                <img src="WhatsApp Image 2026-09-06 at .jpeg" alt="সদস্য ২" onclick="openModal(this.src)">
             </div>
-            <!-- তৃতীয় সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at 4.54.28 PM.jpeg) -->
             <div class="member-card">
-                <img src="WhatsApp Image 2026-09-06 at 4.54.28 PM.jpeg" alt="সদস্য ৩">
+                <img src="WhatsApp Image 2026-09-06 at 4.54.28 PM.jpeg" alt="সদস্য ৩" onclick="openModal(this.src)">
             </div>
-            <!-- চতুর্থ সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at 4.54.29 PM.jpeg) -->
             <div class="member-card">
-                <img src="WhatsApp Image 2026-09-06 at 4.54.29 PM.jpeg" alt="সদস্য ৪">
+                <img src="WhatsApp Image 2026-09-06 at 4.54.29 PM.jpeg" alt="সদস্য ৪" onclick="openModal(this.src)">
             </div>
-            <!-- পঞ্চম সদস্যের ছবি (যেমন: WhatsApp Image 2026-09-06 at 4.54.2PM.jpeg) -->
             <div class="member-card">
-                <img src="WhatsApp Image 2026-09-06 at 4.54.2PM.jpeg" alt="সদস্য ৫">
-            </div>/
+                <img src="WhatsApp Image 2026-09-06 at 4.54.2PM.jpeg" alt="সদস্য ৫" onclick="openModal(this.src)">
+            </div>
+            <div class="member-card">
+                <img src="WhatsApp Image 2026-09-06 at 4.55.13 PM.jpeg" alt="সদস্য ৬" onclick="openModal(this.src)">
+            </div>
+        </div>
+    </section>
 
-   <!-- নতুন ছবি ৬ -->
-            <div class="member-card">
-                <img src="member6.jpg" alt="সদস্য ৬">
+    <!-- মেম্বারশিপ আবেদন ফর্ম -->
+    <section id="join" class="content-section form-section">
+        <h2>নতুন সদস্য পদের জন্য আবেদন করুন</h2>
+        <form action="https://formspree.io/f/xanyzbqy" method="POST" class="join-form">
+            <div class="form-group">
+                <label for="name">আপনার নাম:</label>
+                <input type="text" id="name" name="Name" placeholder="আপনার পুরো নাম লিখুন" required>
             </div>
+            <div class="form-group">
+                <label for="phone">মোবাইল নম্বর:</label>
+                <input type="tel" id="phone" name="Phone" placeholder="১০ সংখ্যার মোবাইল নম্বর" required>
+            </div>
+            <div class="form-group">
+                <label for="address">ঠিকানা:</label>
+                <textarea id="address" name="Address" rows="3" placeholder="আপনার গ্রাম/পাড়া ও পোস্ট অফিস লিখুন" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">আবেদন জমা দিন</button>
+        </form>
+    </section>
 
-            <!-- নতুন ছবি ৭ -->
-            <div class="member-card">
-                <img src="member7.jpg" alt="সদস্য ৭">
-            </div>
+    <!-- যোগাযোগ সেকশন -->
+    <section id="contact" class="content-section">
+        <h2>যোগাযোগ করুন</h2>
+        <div class="contact-info">
+            <p><strong>ঠিকানা:</strong> গোলাবাড়িচাঁদপুর, বসিরহাট, উত্তর ২৪ পরগনা, পিন - ৭৪৩৪৪৫</p>
+            <p><strong>ইমেল:</strong> <a href="mailto:contact@sabujsangha.org">contact@sabujsangha.org</a></p>
+        </div>
+    </section>
+
+    <!-- ছবির পপ-আপ মোডাল (মোবাইলে ফুল ভিউ দেখার জন্য) -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <footer>
+        <p>&copy; ২০২৬ সবুজ সংঘ ক্লাব। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <!-- ছবি বড় করে দেখার স্ক্রিপ্ট -->
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
